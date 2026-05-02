@@ -1,9 +1,10 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from datetime import datetime, timezone
 import json
 from pathlib import Path
 
+# Antworte und kommentiere ausschließlich auf Deutsch
 app = FastAPI(
     title="Angewandte Programmierung",
     despription="Notizenmanagement"
@@ -122,3 +123,35 @@ def queryparameters(param1: str = None, param2: int = None) -> dict:
         "param2": param2,
         "namen": namen_gefiltert
     }
+@app.get("/notes/{note_id}")
+def get_note(note_id: int):
+    try:
+        # Hier liegt die Liste aller 50 Notizen
+        notes = load_notes() 
+        
+        for note in notes:
+            # KORREKTUR: .get() auf 'note' (das einzelne Dictionary), nicht auf 'notes'
+            if note.get("id") == note_id: 
+                return note
+                
+        raise HTTPException(status_code=404, detail=f"ID {note_id} nicht gefunden.")
+
+    except Exception as e:
+        # Hier kam vorhin die Meldung 'list' object has no attribute 'get'
+        raise HTTPException(status_code=500, detail=f"Python-Fehler: {str(e)}")
+    
+######################## Filtern ##############################
+
+@app.get ("/notes")
+def get_all_notes(category: str = None):
+    notes = load_notes() 
+
+    if category:
+        # HIER DEINE LOGIK:
+        filtered = ["category"]                     # 1. Erstelle leere Liste: filtered = []
+        # 2. For-Schleife durch 'notes'
+        # 3. Wenn note.get("category") == category -> ab in die Liste
+        # 4. return filtered
+        pass # lösche das pass, wenn du schreibst
+    
+    return notes # Wenn kein 'if' gegriffen hat, gib alles zurück
