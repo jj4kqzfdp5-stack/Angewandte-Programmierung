@@ -2,6 +2,13 @@
 marp: true
 theme: default
 paginate: true
+
+style: |
+  .columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
 ---
 
 # Applied Programming - Day 1
@@ -9,6 +16,49 @@ paginate: true
 
 **Duration:** 3 hours  
 **Goal:** Build a working FastAPI app with 3 endpoints
+
+
+---
+
+## Course Structure (1/2)
+
+
+
+### 📅 Timeline & Format
+
+**Duration:** 3 Weeks
+- **3 sessions** per week
+- **3 hours** each session
+- Mix of on-site & online
+- Hands-on learning approach
+
+
+---
+
+## Course Structure (2/2)
+
+### 📝 Assignments & Grading
+
+<div class="columns">
+<div>
+**Required for each session:**
+- ✅ Coding Assignment
+- ✅ Work-Log documentation
+
+**Grading Criteria:**
+- 🎯 **Both** assignments mandatory
+- 📦 Submitted via **GitHub**
+- 📊 Final grade based on all assignments
+- 💡 Content may adjust, workload stays same
+</div><div>
+
+**Important:**
+> Your GitHub repositories are the single source of truth for grading!
+
+</div></div>
+
+
+
 
 ---
 

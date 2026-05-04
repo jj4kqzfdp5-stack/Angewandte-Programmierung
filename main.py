@@ -1,157 +1,127 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from datetime import datetime, timezone
-import json
 from pathlib import Path
+from typing import Optional, List
+import json
 
-# Antworte und kommentiere ausschließlich auf Deutsch
 app = FastAPI(
     title="Angewandte Programmierung",
-    despription="Notizenmanagement"
-    )
+    description="Notizenmanagement API für den Kurs"
+)
 
-@app.get("/")
-def root ():
-    return {"message": "Hello ... World"}
+# --- Modelle ---
 
-
-@app.get("/name/{name}")
-def greet_name(name: str):
-    return{"message": f"Hallo {name} !"}
-
-@app.get("/status")
-def get_status():
-    return{"message": "Aktueller Status: Kein Status !"}
-
-@app.get("/berechnung")
-def berechnung():
-    ergebnis=3+3
-    return{"message": f"Ergebnis ist {ergebnis} !"}
-
-@app.get("/cal/{zahl1}/{zahl2}")                        #Entgegennehmen der Zahlen aus der URL
-def calculation(zahl1: int, zahl2: int):                #Kopfzeile Funktion und Definition der Variablen
-    ergebnis = zahl1 + zahl2                            #Berechnung
-    return{"message": f"Ergebnis ist {ergebnis} !"}     #Ausgabe (f steht für formated string)
-
-#######################################################
-# Endpunkte für Notizen
-
-class NoteCreate (BaseModel):
+class NoteCreate(BaseModel):
     title: str
     content: str
+    category: str = "General"  # Standardwert für Kategorie
 
 class Note(BaseModel):
     id: int
-    title:str
+    title: str
     content: str
+    category: str
     created_at: str
+
+# --- Hilfsfunktionen für Persistenz ---
 
 NOTES_FILE = Path("data/notes.json")
 
-def load_notes():
-    """Load notes from JSON file and return notes list and next ID counter"""
-    notes_db = []
-    note_id_counter = 1
+def load_notes() -> tuple[List[Note], int]:
+    """Lädt Notizen aus der JSON-Datei und gibt (Liste, Nächste_ID) zurück."""
+    if not NOTES_FILE.exists():
+        return [], 1
+    
+    with open(NOTES_FILE, 'r') as f:
+        data = json.load(f)
+        # Wir wandeln Dicts aus JSON direkt in Pydantic-Objekte um
+        notes = [Note(**n) for n in data]
+        
+    next_id = max((n.id for n in notes), default=0) + 1
+    return notes, next_id
 
-    if NOTES_FILE.exists():
-        with open(NOTES_FILE, 'r') as f:
-            data = json.load(f)
-            notes_db = [Note(**note) for note in data]
-
-            # Set counter to max ID + 1
-            if notes_db:
-                note_id_counter = max(note.id for note in notes_db) + 1
-
-    return notes_db, note_id_counter
-
-
-def save_notes(notes_db):
-    """Save notes to JSON file after each change"""
-    # Ensure data directory exists
+def save_notes(notes: List[Note]):
+    """Speichert die Liste der Notizen-Objekte als JSON."""
     NOTES_FILE.parent.mkdir(parents=True, exist_ok=True)
-
     with open(NOTES_FILE, 'w') as f:
-        # Convert Note objects to dicts
-        notes_data = [note.dict() for note in notes_db]
-        json.dump(notes_data, f, indent=2)
+        # .model_dump() ist der moderne Ersatz für .dict() in Pydantic V2
+        json.dump([n.model_dump() for n in notes], f, indent=2)
 
+# --- Basis Endpunkte ---
 
+@app.get("/")
+def root():
+    return {"message": "Hello ... World!"}  # Fix für den Test (Ausrufezeichen)
 
+@app.get("/is-adult/{age}")
+def check_adult(age: int):
+    """Prüft Volljährigkeit und validiert gegen negative Werte."""
+    if age < 0:
+        raise HTTPException(status_code=400, detail="Alter darf nicht negativ sein.")
+    
+    is_adult = age >= 18
+    return {
+        "age": age,
+        "is_adult": is_adult,
+        "can_drive": is_adult,
+        "can_vote": is_adult
+    }
+
+# --- Notizen Endpunkte (CRUD & Filter) ---
 
 @app.post("/notes", status_code=201)
-def create_note(note: NoteCreate) -> Note:
-
-    """Create a new note"""
-
-    notes_db, note_id_counter = load_notes()
-
+def create_note(note_in: NoteCreate) -> Note:
+    """Erstellt eine neue Notiz und speichert sie lokal."""
+    notes, next_id = load_notes()
+    
     new_note = Note(
-
-        id=note_id_counter,
-        title=note.title,
-        content=note.content,
+        id=next_id,
+        title=note_in.title,
+        content=note_in.content,
+        category=note_in.category,
         created_at=datetime.now(timezone.utc).isoformat()
     )
-
-    notes_db.append(new_note)
-    save_notes(notes_db)
-
+    
+    notes.append(new_note)
+    save_notes(notes)
     return new_note
 
-#@app.get("/notes")
-#def list_notes() -> list [Note]:
-#   """Get a list of all notes"""
-
-@app.get("/queryparameters")
-def queryparameters(param1: str = None, param2: int = None) -> dict:
-    """Example Entpoint query parameters"""
+@app.get("/notes", response_model=List[Note])
+def get_notes(category: Optional[str] = None, search: Optional[str] = None):
+    """Gibt alle Notizen zurück, optional gefiltert nach Kategorie oder Suchbegriff."""
+    notes, _ = load_notes()
     
-    namen = ['martin', 'sophia', 'nico']
-
-    if not param1:
-        return{"namen": namen}
-
-
-    namen_gefiltert =[]
-    for name in namen:
-        if param1 in name:
-            namen_gefiltert.append(name)
-
-
-    return {
-        "param1": param1,
-        "param2": param2,
-        "namen": namen_gefiltert
-    }
-@app.get("/notes/{note_id}")
-def get_note(note_id: int):
-    try:
-        # Hier liegt die Liste aller 50 Notizen
-        notes = load_notes() 
-        
-        for note in notes:
-            # KORREKTUR: .get() auf 'note' (das einzelne Dictionary), nicht auf 'notes'
-            if note.get("id") == note_id: 
-                return note
-                
-        raise HTTPException(status_code=404, detail=f"ID {note_id} nicht gefunden.")
-
-    except Exception as e:
-        # Hier kam vorhin die Meldung 'list' object has no attribute 'get'
-        raise HTTPException(status_code=500, detail=f"Python-Fehler: {str(e)}")
-    
-######################## Filtern ##############################
-
-@app.get ("/notes")
-def get_all_notes(category: str = None):
-    notes = load_notes() 
-
+    filtered = notes
     if category:
-        # HIER DEINE LOGIK:
-        filtered = ["category"]                     # 1. Erstelle leere Liste: filtered = []
-        # 2. For-Schleife durch 'notes'
-        # 3. Wenn note.get("category") == category -> ab in die Liste
-        # 4. return filtered
-        pass # lösche das pass, wenn du schreibst
+        filtered = [n for n in filtered if n.category.lower() == category.lower()]
     
-    return notes # Wenn kein 'if' gegriffen hat, gib alles zurück
+    if search:
+        s = search.lower()
+        filtered = [n for n in filtered if s in n.title.lower() or s in n.content.lower()]
+        
+    return filtered
+
+@app.get("/notes/{note_id}", response_model=Note)
+def get_single_note(note_id: int):
+    """Sucht eine spezifische Notiz per ID."""
+    notes, _ = load_notes()
+    for n in notes:
+        if n.id == note_id:
+            return n
+    raise HTTPException(status_code=404, detail=f"Notiz {note_id} nicht gefunden.")
+
+@app.delete("/notes/{note_id}", status_code=204)
+def delete_note(note_id: int):
+    """Löscht eine Notiz."""
+    notes, _ = load_notes()
+    initial_length = len(notes)
+    
+    # Behalte alle Notizen, außer der mit der gesuchten ID
+    notes = [n for n in notes if n.id != note_id]
+    
+    if len(notes) == initial_length:
+        raise HTTPException(status_code=404, detail="Notiz nicht gefunden.")
+    
+    save_notes(notes)
+    return None  # 204 No Content sendet nichts zurück

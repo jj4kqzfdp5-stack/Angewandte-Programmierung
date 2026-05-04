@@ -1,552 +1,308 @@
 [
-    {
-        "id": 1,
-        "title": "Test Notiz 1",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Work",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-23T11:43:23.518507+00:00"
-    },
-    {
-        "id": 2,
-        "title": "Test Notiz 2",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Study",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-24T11:43:23.518632+00:00"
-    },
-    {
-        "id": 3,
-        "title": "Test Notiz 3",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Finance",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-06T11:43:23.518636+00:00"
-    },
-    {
-        "id": 4,
-        "title": "Test Notiz 4",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Work",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-17T11:43:23.518638+00:00"
-    },
-    {
-        "id": 5,
-        "title": "Test Notiz 5",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Study",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-20T11:43:23.518640+00:00"
-    },
-    {
-        "id": 6,
-        "title": "Test Notiz 6",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Work",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-04T11:43:23.518642+00:00"
-    },
-    {
-        "id": 7,
-        "title": "Test Notiz 7",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Study",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-04T11:43:23.518644+00:00"
-    },
-    {
-        "id": 8,
-        "title": "Test Notiz 8",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Study",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-28T11:43:23.518645+00:00"
-    },
-    {
-        "id": 9,
-        "title": "Test Notiz 9",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Study",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-16T11:43:23.518647+00:00"
-    },
-    {
-        "id": 10,
-        "title": "Test Notiz 10",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Study",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-27T11:43:23.518648+00:00"
-    },
-    {
-        "id": 11,
-        "title": "Test Notiz 11",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Finance",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-05-01T11:43:23.518650+00:00"
-    },
-    {
-        "id": 12,
-        "title": "Test Notiz 12",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Personal",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-14T11:43:23.518651+00:00"
-    },
-    {
-        "id": 13,
-        "title": "Test Notiz 13",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Finance",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-20T11:43:23.518653+00:00"
-    },
-    {
-        "id": 14,
-        "title": "Test Notiz 14",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Personal",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-08T11:43:23.518655+00:00"
-    },
-    {
-        "id": 15,
-        "title": "Test Notiz 15",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Personal",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-04T11:43:23.518656+00:00"
-    },
-    {
-        "id": 16,
-        "title": "Test Notiz 16",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Health",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-21T11:43:23.518658+00:00"
-    },
-    {
-        "id": 17,
-        "title": "Test Notiz 17",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Finance",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-12T11:43:23.518659+00:00"
-    },
-    {
-        "id": 18,
-        "title": "Test Notiz 18",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Personal",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-25T11:43:23.518660+00:00"
-    },
-    {
-        "id": 19,
-        "title": "Test Notiz 19",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Study",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-11T11:43:23.518662+00:00"
-    },
-    {
-        "id": 20,
-        "title": "Test Notiz 20",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Personal",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-05T11:43:23.518663+00:00"
-    },
-    {
-        "id": 21,
-        "title": "Test Notiz 21",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Work",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-14T11:43:23.518664+00:00"
-    },
-    {
-        "id": 22,
-        "title": "Test Notiz 22",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Study",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-07T11:43:23.518666+00:00"
-    },
-    {
-        "id": 23,
-        "title": "Test Notiz 23",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Finance",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-11T11:43:23.518667+00:00"
-    },
-    {
-        "id": 24,
-        "title": "Test Notiz 24",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Personal",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-20T11:43:23.518668+00:00"
-    },
-    {
-        "id": 25,
-        "title": "Test Notiz 25",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Work",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-24T11:43:23.518670+00:00"
-    },
-    {
-        "id": 26,
-        "title": "Test Notiz 26",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Personal",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-17T11:43:23.518671+00:00"
-    },
-    {
-        "id": 27,
-        "title": "Test Notiz 27",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Study",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-03T11:43:23.518673+00:00"
-    },
-    {
-        "id": 28,
-        "title": "Test Notiz 28",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Personal",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-05T11:43:23.518674+00:00"
-    },
-    {
-        "id": 29,
-        "title": "Test Notiz 29",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Work",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-11T11:43:23.518675+00:00"
-    },
-    {
-        "id": 30,
-        "title": "Test Notiz 30",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Personal",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-02T11:43:23.518677+00:00"
-    },
-    {
-        "id": 31,
-        "title": "Test Notiz 31",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Study",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-08T11:43:23.518678+00:00"
-    },
-    {
-        "id": 32,
-        "title": "Test Notiz 32",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Study",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-22T11:43:23.518679+00:00"
-    },
-    {
-        "id": 33,
-        "title": "Test Notiz 33",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Personal",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-29T11:43:23.518681+00:00"
-    },
-    {
-        "id": 34,
-        "title": "Test Notiz 34",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Personal",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-29T11:43:23.518682+00:00"
-    },
-    {
-        "id": 35,
-        "title": "Test Notiz 35",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Health",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-01T11:43:23.518683+00:00"
-    },
-    {
-        "id": 36,
-        "title": "Test Notiz 36",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Study",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-04T11:43:23.518685+00:00"
-    },
-    {
-        "id": 37,
-        "title": "Test Notiz 37",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Finance",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-01T11:43:23.518686+00:00"
-    },
-    {
-        "id": 38,
-        "title": "Test Notiz 38",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Finance",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-25T11:43:23.518688+00:00"
-    },
-    {
-        "id": 39,
-        "title": "Test Notiz 39",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Personal",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-20T11:43:23.518689+00:00"
-    },
-    {
-        "id": 40,
-        "title": "Test Notiz 40",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Finance",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-30T11:43:23.518690+00:00"
-    },
-    {
-        "id": 41,
-        "title": "Test Notiz 41",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Personal",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-05T11:43:23.518691+00:00"
-    },
-    {
-        "id": 42,
-        "title": "Test Notiz 42",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Work",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-01T11:43:23.518693+00:00"
-    },
-    {
-        "id": 43,
-        "title": "Test Notiz 43",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Finance",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-06T11:43:23.518694+00:00"
-    },
-    {
-        "id": 44,
-        "title": "Test Notiz 44",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Finance",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-29T11:43:23.518695+00:00"
-    },
-    {
-        "id": 45,
-        "title": "Test Notiz 45",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Personal",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-13T11:43:23.518697+00:00"
-    },
-    {
-        "id": 46,
-        "title": "Test Notiz 46",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Study",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-21T11:43:23.518698+00:00"
-    },
-    {
-        "id": 47,
-        "title": "Test Notiz 47",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Study",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-07T11:43:23.518699+00:00"
-    },
-    {
-        "id": 48,
-        "title": "Test Notiz 48",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Personal",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-17T11:43:23.518701+00:00"
-    },
-    {
-        "id": 49,
-        "title": "Test Notiz 49",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Health",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-12T11:43:23.518702+00:00"
-    },
-    {
-        "id": 50,
-        "title": "Test Notiz 50",
-        "content": "Inhalt der Testnotiz mit Beispieldaten.",
-        "category": "Finance",
-        "tags": [
-            "test",
-            "mock"
-        ],
-        "created_at": "2026-04-15T11:43:23.518703+00:00"
-    }
+  {
+    "id": 1,
+    "title": "Test Notiz 1",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-23T11:43:23.518507+00:00"
+  },
+  {
+    "id": 2,
+    "title": "Test Notiz 2",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-24T11:43:23.518632+00:00"
+  },
+  {
+    "id": 3,
+    "title": "Test Notiz 3",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-06T11:43:23.518636+00:00"
+  },
+  {
+    "id": 4,
+    "title": "Test Notiz 4",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-17T11:43:23.518638+00:00"
+  },
+  {
+    "id": 5,
+    "title": "Test Notiz 5",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-20T11:43:23.518640+00:00"
+  },
+  {
+    "id": 6,
+    "title": "Test Notiz 6",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-04T11:43:23.518642+00:00"
+  },
+  {
+    "id": 7,
+    "title": "Test Notiz 7",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-04T11:43:23.518644+00:00"
+  },
+  {
+    "id": 8,
+    "title": "Test Notiz 8",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-28T11:43:23.518645+00:00"
+  },
+  {
+    "id": 9,
+    "title": "Test Notiz 9",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-16T11:43:23.518647+00:00"
+  },
+  {
+    "id": 10,
+    "title": "Test Notiz 10",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-27T11:43:23.518648+00:00"
+  },
+  {
+    "id": 11,
+    "title": "Test Notiz 11",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-05-01T11:43:23.518650+00:00"
+  },
+  {
+    "id": 12,
+    "title": "Test Notiz 12",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-14T11:43:23.518651+00:00"
+  },
+  {
+    "id": 13,
+    "title": "Test Notiz 13",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-20T11:43:23.518653+00:00"
+  },
+  {
+    "id": 14,
+    "title": "Test Notiz 14",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-08T11:43:23.518655+00:00"
+  },
+  {
+    "id": 15,
+    "title": "Test Notiz 15",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-04T11:43:23.518656+00:00"
+  },
+  {
+    "id": 16,
+    "title": "Test Notiz 16",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-21T11:43:23.518658+00:00"
+  },
+  {
+    "id": 17,
+    "title": "Test Notiz 17",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-12T11:43:23.518659+00:00"
+  },
+  {
+    "id": 18,
+    "title": "Test Notiz 18",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-25T11:43:23.518660+00:00"
+  },
+  {
+    "id": 19,
+    "title": "Test Notiz 19",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-11T11:43:23.518662+00:00"
+  },
+  {
+    "id": 20,
+    "title": "Test Notiz 20",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-05T11:43:23.518663+00:00"
+  },
+  {
+    "id": 21,
+    "title": "Test Notiz 21",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-14T11:43:23.518664+00:00"
+  },
+  {
+    "id": 22,
+    "title": "Test Notiz 22",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-07T11:43:23.518666+00:00"
+  },
+  {
+    "id": 23,
+    "title": "Test Notiz 23",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-11T11:43:23.518667+00:00"
+  },
+  {
+    "id": 24,
+    "title": "Test Notiz 24",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-20T11:43:23.518668+00:00"
+  },
+  {
+    "id": 25,
+    "title": "Test Notiz 25",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-24T11:43:23.518670+00:00"
+  },
+  {
+    "id": 26,
+    "title": "Test Notiz 26",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-17T11:43:23.518671+00:00"
+  },
+  {
+    "id": 27,
+    "title": "Test Notiz 27",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-03T11:43:23.518673+00:00"
+  },
+  {
+    "id": 28,
+    "title": "Test Notiz 28",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-05T11:43:23.518674+00:00"
+  },
+  {
+    "id": 29,
+    "title": "Test Notiz 29",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-11T11:43:23.518675+00:00"
+  },
+  {
+    "id": 30,
+    "title": "Test Notiz 30",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-02T11:43:23.518677+00:00"
+  },
+  {
+    "id": 31,
+    "title": "Test Notiz 31",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-08T11:43:23.518678+00:00"
+  },
+  {
+    "id": 32,
+    "title": "Test Notiz 32",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-22T11:43:23.518679+00:00"
+  },
+  {
+    "id": 33,
+    "title": "Test Notiz 33",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-29T11:43:23.518681+00:00"
+  },
+  {
+    "id": 34,
+    "title": "Test Notiz 34",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-29T11:43:23.518682+00:00"
+  },
+  {
+    "id": 35,
+    "title": "Test Notiz 35",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-01T11:43:23.518683+00:00"
+  },
+  {
+    "id": 36,
+    "title": "Test Notiz 36",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-04T11:43:23.518685+00:00"
+  },
+  {
+    "id": 37,
+    "title": "Test Notiz 37",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-01T11:43:23.518686+00:00"
+  },
+  {
+    "id": 38,
+    "title": "Test Notiz 38",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-25T11:43:23.518688+00:00"
+  },
+  {
+    "id": 39,
+    "title": "Test Notiz 39",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-20T11:43:23.518689+00:00"
+  },
+  {
+    "id": 40,
+    "title": "Test Notiz 40",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-30T11:43:23.518690+00:00"
+  },
+  {
+    "id": 41,
+    "title": "Test Notiz 41",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-05T11:43:23.518691+00:00"
+  },
+  {
+    "id": 42,
+    "title": "Test Notiz 42",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-01T11:43:23.518693+00:00"
+  },
+  {
+    "id": 43,
+    "title": "Test Notiz 43",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-06T11:43:23.518694+00:00"
+  },
+  {
+    "id": 44,
+    "title": "Test Notiz 44",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-29T11:43:23.518695+00:00"
+  },
+  {
+    "id": 45,
+    "title": "Test Notiz 45",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-13T11:43:23.518697+00:00"
+  },
+  {
+    "id": 46,
+    "title": "Test Notiz 46",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-21T11:43:23.518698+00:00"
+  },
+  {
+    "id": 47,
+    "title": "Test Notiz 47",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-07T11:43:23.518699+00:00"
+  },
+  {
+    "id": 48,
+    "title": "Test Notiz 48",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-17T11:43:23.518701+00:00"
+  },
+  {
+    "id": 49,
+    "title": "Test Notiz 49",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-12T11:43:23.518702+00:00"
+  },
+  {
+    "id": 50,
+    "title": "Test Notiz 50",
+    "content": "Inhalt der Testnotiz mit Beispieldaten.",
+    "created_at": "2026-04-15T11:43:23.518703+00:00"
+  },
+  {
+    "id": 51,
+    "title": "Integration Test",
+    "content": "Checking JSON persistence",
+    "created_at": "2026-05-04T14:05:00.347375+00:00"
+  }
 ]
