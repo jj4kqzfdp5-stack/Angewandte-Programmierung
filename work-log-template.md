@@ -56,31 +56,25 @@ _Explain how you overcame the challenges or what help you needed._
 
 #### 1. ✅ What did I accomplish?
 
-- erste API Endpunkte erstellt und im Browser aufgerufen
-- Einbindung der openweather API und ausgabe über eigenen Endpunkt
-
-
+Erstellung der ersten API-Endpunkte: Aufsetzen einer Basis-Struktur mit FastAPI und erfolgreicher Aufruf der Endpunkte über den Browser. Ich habe gelernt, wie man Routen definiert und einfache JSON-Antworten zurückgibt.
+Privates Projekt: Integration einer externen API: Einbindung der OpenWeather-API zur Abfrage von Echtzeit-Wetterdaten. Die externen Daten wurden mittels Requests abgeholt, verarbeitet und über einen eigenen Endpunkt strukturiert an den Client ausgegeben.
+Verständnis von JSON-Strukturen: Analyse der von externen Diensten gelieferten Datenformate, um gezielt Informationen wie Temperatur oder Wetterbeschreibung zu extrahieren.
 
 ---
 
 #### 2. 🚧 What challenges did I face?
 
-- ich musste meine Kentnisse aus dem Grundlagen Programmierung Kurs etwas auffrischen zum Thema Funktionen
-- die Daten von openweather abzuholen und direkt an den eigenen Enpunkt weiterzugegeb, war gar nicht so einfach
-- Gemini hat ganz gut geholfen ;)
-
-
-
+Wissenslücken in der Basis-Programmierung: Notwendigkeit, grundlegende Konzepte wie Funktionsdefinitionen, Parameterübergabe und Rückgabewerte aus dem vorangegangenen Kurs aufzufrischen.
+Daten-Mapping und Verschachtelung: Die JSON-Antwort von OpenWeather war komplexer als erwartet. Es war gar nicht so einfach, die tief verschachtelten Werte korrekt anzusprechen und direkt an den eigenen Endpunkt weiterzugeben.
+Tool-Einstieg: Erste Orientierung in der Zusammenarbeit mit Google Gemini zur Code-Erklärung, ohne dabei den Überblick über die eigene Logik zu verlieren.
 
 ---
 
 #### 3. 💡 How did I overcome them?
 
-- Gemini gefragt und mir den Code Zeile für Zeile erklären lassen (vor allem bei der openweather API)
-- Unterlagen vom Grundlagenkurs nochmal durchgelesen
-
-
-
+Gezielte Code-Analyse: Ich habe Gemini genutzt um die Logik der API-Abfragen Zeile für Zeile nachzuvollziehen. Besonders hilfreich war die Erklärung, wie das `requests`-Modul die Daten zwischenspeichert.
+Recherche in Kursunterlagen: Systematische Wiederholung der Themen aus dem Grundlagenkurs Programmierung zur Festigung der Python-Kenntnisse, insbesondere zum Thema Dictionaries und Listen.
+Debugging im Terminal: Erste Versuche, Variableninhalte per `print` auszugeben, um die Struktur der API-Antworten vor der Weiterverarbeitung zu prüfen.
 
 ---
 
@@ -88,30 +82,24 @@ _Explain how you overcame the challenges or what help you needed._
 
 #### 1. ✅ What did I accomplish?
 
-- nicht nur get sondern auch poast
-- Eingaben im Browser werden auch verarbeitet
-
-
-
-
+Erweiterung der HTTP-Methoden: Implementierung von POST-Requests zusätzlich zu den bestehenden GET-Abfragen, um Daten nicht nur abzurufen, sondern auch an den Server zu senden.
+Verarbeitung von User-Input: Realisierung einer Logik, bei der Eingaben aus dem Browser-Frontend entgegengenommen, validiert und serverseitig verarbeitet werden.
+Interaktive Endpunkte: Erstellung von Routen, die auf Benutzereingaben reagieren, was die Basis für die spätere Erstellung von Notizen bildete.
 ---
 
 #### 2. 🚧 What challenges did I face?
 
-- Aufgabe der Hausaufgabe fand ich schwierig
-- habs aus Zeitmangel nicht gemacht
-
-
+Komplexität der Transferaufgaben: Die Anforderungen der Hausaufgabe waren im Vergleich zum Vorlesungsinhalt deutlich anspruchsvoller, da mehrere Konzepte kombiniert werden mussten.
+Zeitmanagement: Aufgrund zeitlicher Engpässe und des hohen Schwierigkeitsgrades der Aufgabe konnte die Hausaufgabe zum aktuellen Zeitpunkt nicht vollständig bearbeitet werden.
+Verständnis von Request-Bodys: Die Unterscheidung zwischen Query-Parametern in der URL und Daten im Request-Body bei POST-Anfragen war anfangs gewöhnungsbedürftig.
 
 ---
 
 #### 3. 💡 How did I overcome them?
 
-
-/
-
-
-
+Priorisierung: Konzentration auf das Verständnis der Kernkonzepte während der Präsenzzeit, um zumindest die POST-Logik theoretisch und in einfachen Beispielen zu beherrschen.
+Nachbearbeitungsplanung: Noch zu erledigende Punkte aufgeschrieben und Rücksprache mit Martin, um die fehlenden Übungsteile systematisch zu einem späteren Zeitpunkt nachzuholen.
+Einsatz von Dokumentation: Nutzung der automatischen FastAPI-Dokumentation (`/docs`), um visuell nachzuvollziehen, wie die POST-Parameter an den Server übermittelt werden müssen.
 ---
 
 ### Day 3
@@ -151,54 +139,49 @@ Filter-Logik: Erstellen einer neuen Ergebnis-Liste ("Eimer"-Prinzip), in die wä
 
 #### 1. ✅ What did I accomplish?
 
-
-
-
-
-
+Datenbank-Migration: Umstellung der Datenhaltung von einer lokalen Python-Liste auf eine persistente SQLite-Datenbank unter Verwendung von SQLModel.
+Automatisierte Tabellenerstellung: Implementierung der create_db_and_tables() Funktion, um sicherzustellen, dass die Datenstruktur beim Anwendungsstart automatisch initialisiert wird.
+Dependency Injection: Einrichtung einer Session-Verwaltung (get_session), die eine saubere Trennung zwischen API-Logik und Datenbank-Verbindung gewährleistet.
+CRUD-Refactoring: Anpassung sämtlicher Endpunkte (GET, POST, PATCH, DELETE), sodass die Datenverarbeitung nun über SQL-Queries statt über Listen-Operationen erfolgt.
 ---
 
 #### 2. 🚧 What challenges did I face?
 
-
-
-
-
-
+ID-Zuweisung: Anfängliche Unklarheit darüber, ob die note_id manuell vergeben werden muss oder durch die Datenbank generiert wird.
+Session-Lifecycle: Probleme mit vorzeitig geschlossenen Datenbank-Verbindungen während der Testläufe.
+Daten-Persistenz: Fehlerhafte Konfiguration der Engine, wodurch Daten nach einem Server-Neustart nicht dauerhaft gespeichert wurden.
 ---
 
 #### 3. 💡 How did I overcome them?
 
-
-
-
-
-
+Primary-Key Definition: Korrekte Verwendung von Field(primary_key=True) im SQLModel, um die automatische Inkrementierung der IDs durch SQLite zu aktivieren.
+DB Browser Integration: Einsatz eines externen Datenbank-Viewers zur Verifizierung der Tabelleninhalte auf Dateiebene.
+Context Manager: Nutzung des with-Statements für die Session-Verwaltung, um ein zuverlässiges Öffnen und Schließen der Datenbank-Leitungen zu garantieren.
 ---
 
 ### Day 5
 
 #### 1. ✅ What did I accomplish?
 
-
-
-
-
-
+Einführung strikter Schemas: Erstellung von NoteCreate und NoteUpdate Modellen mit Pydantic, inklusive der Sperre für unbekannte Felder via extra="forbid".
+Feld-Validierung & Normalisierung: Implementierung von Längenbeschränkungen sowie automatische Bereinigung (Strip/Lowercase) von Kategorien und Tags.
+Modell-Validator: Einbau einer Cross-Field-Validierung, die erzwingt, dass Notizen der Kategorie "work" zwingend das entsprechende "work"-Tag enthalten müssen.
+Regex-Constraints: Verschärfung des Tag-Modells durch einen regulären Ausdruck (^[a-z0-9-]+$), um die Einhaltung von Benennungskonventionen zu garantieren.
 ---
 
 #### 2. 🚧 What challenges did I face?
 
-
-
-
-
-
+Routing-Konflikte: Der Endpunkt /notes/stats wurde durch FastAPI fälschlicherweise als Pfad-Parameter {note_id} interpretiert, was zu 422-Fehlern führte.
+Library-Inkompatibilität: Das Argument pattern innerhalb der Field-Funktion von SQLModel verursachte einen TypeError, da es dort nicht nativ unterstützt wird.
+Schema-Integrität: Start-Fehler der App aufgrund eines fehlenden Primärschlüssels im neu erstellten Tag-Modell.
 ---
 
 #### 3. 💡 How did I overcome them?
 
-
+Pfad-Priorisierung: Neusortierung der Endpunkte in der main.py, um statische Routen vor variablen Pfad-Parametern zu platzieren.
+Validator-Workaround: Auslagerung der Regex-Prüfung in einen manuellen field_validator unter Verwendung des re-Moduls, um den Field-Fehler zu umgehen.
+Automatisierte Test-Suite: Erstellung der test_validation.py mit 8 Testfällen, um die Einhaltung aller neuen Validierungsregeln effizient nachzuweisen.
+Model-Konfiguration: Aktivierung von validate_assignment=True, um die Datenintegrität auch bei Änderungen an bereits bestehenden Objekten sicherzustellen.
 
 
 
@@ -209,7 +192,7 @@ Filter-Logik: Erstellen einer neuen Ergebnis-Liste ("Eimer"-Prinzip), in die wä
 
 #### 1. ✅ What did I accomplish?
 
-
+ich habe die Inhalte, die ich noch nicht bearbeitet hatte nachgeholt und ein bisschehn die Dokumentation gewälzt ;)
 
 
 
@@ -218,7 +201,7 @@ Filter-Logik: Erstellen einer neuen Ergebnis-Liste ("Eimer"-Prinzip), in die wä
 
 #### 2. 🚧 What challenges did I face?
 
-
+am Donnerstag morgen (den ich mir extra dafür geblockt hatte, die Vorlesungsinhalte nachzuarbeiten) war weder die Aufzeichnung noch das Transkript verfügbar
 
 
 
@@ -227,7 +210,7 @@ Filter-Logik: Erstellen einer neuen Ergebnis-Liste ("Eimer"-Prinzip), in die wä
 
 #### 3. 💡 How did I overcome them?
 
-
+Ich habe Martin kontaktiert, aber zeitnah keine Antwort erhalten
 
 
 
