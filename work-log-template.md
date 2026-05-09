@@ -192,29 +192,28 @@ Model-Konfiguration: Aktivierung von validate_assignment=True, um die Dateninteg
 
 #### 1. ✅ What did I accomplish?
 
-ich habe die Inhalte, die ich noch nicht bearbeitet hatte nachgeholt und ein bisschehn die Dokumentation gewälzt ;)
-
-
-
+Erfolgreiche Integration und Ausführung deiner umfassenden Test-Suite.
+Überarbeitung der Endpunkte für PUT, PATCH und DELETE sowie Implementierung von Case-Insensitive Search, um die REST-Konformität sicherzustellen.
+Finalisierung der Tag- und Kategorie-Endpunkte (/tags/{tag}/notes und /categories/{cat}/notes), um die Navigation zwischen Ressourcen zu ermöglichen.
+Sicherstellung, dass alle neuen Endpunkte und Validierungen korrekt in der /docs (Swagger UI) angezeigt werden.
 
 ---
 
 #### 2. 🚧 What challenges did I face?
 
-am Donnerstag morgen (den ich mir extra dafür geblockt hatte, die Vorlesungsinhalte nachzuarbeiten) war weder die Aufzeichnung noch das Transkript verfügbar
-
-
-
+ Da am Donnerstag Morgen weder die Video-Aufzeichnung noch das Transkript der Vorlesung verfügbar waren, gestaltete sich die Rekonstruktion der komplexeren Implementierungsschritte schwierig.
+Mein ursprünglicher Validator für die "work"-Kategorie war zu strikt und hat die Test-Daten blockiert (422 Error), da diese den spezifischen Tag nicht immer enthielten.
+Probleme bei der Implementierung einer case-insensitiven Suche, da SQLite bei bestimmten SQL-Befehlen (func.lower()) anders reagiert als erwartet.
+Statische Pfade wie /notes/stats kollidierten mit dynamischen Pfaden wie /notes/{note_id}, was zu falschen Zuordnungen führte.
 
 ---
 
 #### 3. 💡 How did I overcome them?
 
-Ich habe Martin kontaktiert, aber zeitnah keine Antwort erhalten
-
-
-
-
+Umstellung der Logik auf eine flexiblere Handhabung, um die Kompatibilität mit externen Test-Suiten zu gewährleisten, ohne die Datenintegrität zu opfern.
+Nutzung der .contains() Methode in SQLModel für eine robustere und datenbankübergreifende Suchfunktion.
+Korrektur der Routen-Reihenfolge in der main.py, sodass statische Pfade bevorzugt behandelt werden.
+Systematische Analyse der Pytest-Fehlermeldungen zur schrittweisen Optimierung der API-Logik.
 ---
 
 ## Week 3
