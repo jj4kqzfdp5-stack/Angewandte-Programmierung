@@ -2,52 +2,6 @@
 
 **Lucas Landmann:** 
 
-Instructions: Fill out one log for each course day. Content to consider: Course Sessions + Assignment
-
-## Template:
-
----
-
-## 1. ✅ What did I accomplish?
-
-_Reflect on the activities, exercises, and work you completed today._
-
-**Guiding questions:**
-- What topics or concepts did you work with?
-- What exercises or projects did you complete?
-- What tools or technologies did you use?
-- What did you learn or practice?
-
-
-
----
-
-## 2. 🚧 What challenges did I face?
-
-_Describe any difficulties, obstacles, or confusing moments you encountered._
-
-**Guiding questions:**
-- What was difficult to understand?
-- Where did you get stuck?
-- What errors or problems did you face?
-- What felt frustrating or confusing?
-
-
-
-
----
-
-## 3. 💡 How did I overcome them?
-
-_Explain how you overcame the challenges or what help you needed._
-
-**Guiding questions:**
-- What strategies did you try?
-- Who or what helped you (instructor, classmates, documentation)?
-- What did you learn from solving the problem?
-- What questions do you still have?
-
-
 ---
 
 ## Week 1
@@ -141,8 +95,8 @@ Filter-Logik: Erstellen einer neuen Ergebnis-Liste ("Eimer"-Prinzip), in die wä
 
 Datenbank-Migration: Umstellung der Datenhaltung von einer lokalen Python-Liste auf eine persistente SQLite-Datenbank unter Verwendung von SQLModel.
 Automatisierte Tabellenerstellung: Implementierung der create_db_and_tables() Funktion, um sicherzustellen, dass die Datenstruktur beim Anwendungsstart automatisch initialisiert wird.
-Dependency Injection: Einrichtung einer Session-Verwaltung (get_session), die eine saubere Trennung zwischen API-Logik und Datenbank-Verbindung gewährleistet.
-CRUD-Refactoring: Anpassung sämtlicher Endpunkte (GET, POST, PATCH, DELETE), sodass die Datenverarbeitung nun über SQL-Queries statt über Listen-Operationen erfolgt.
+Einrichtung einer Session-Verwaltung (get_session), die eine saubere Trennung zwischen API-Logik und Datenbank-Verbindung gewährleistet.
+ Anpassung sämtlicher Endpunkte (GET, POST, PATCH, DELETE), sodass die Datenverarbeitung nun über SQL-Queries statt über Listen-Operationen erfolgt.
 ---
 
 #### 2. 🚧 What challenges did I face?
@@ -201,7 +155,7 @@ Sicherstellung, dass alle neuen Endpunkte und Validierungen korrekt in der /docs
 
 #### 2. 🚧 What challenges did I face?
 
- Da am Donnerstag Morgen weder die Video-Aufzeichnung noch das Transkript der Vorlesung verfügbar waren, gestaltete sich die Rekonstruktion der komplexeren Implementierungsschritte schwierig.
+Da am Donnerstag Morgen weder die Video-Aufzeichnung noch das Transkript der Vorlesung verfügbar waren, gestaltete sich die Rekonstruktion der komplexeren Implementierungsschritte schwierig.
 Mein ursprünglicher Validator für die "work"-Kategorie war zu strikt und hat die Test-Daten blockiert (422 Error), da diese den spezifischen Tag nicht immer enthielten.
 Probleme bei der Implementierung einer case-insensitiven Suche, da SQLite bei bestimmten SQL-Befehlen (func.lower()) anders reagiert als erwartet.
 Statische Pfade wie /notes/stats kollidierten mit dynamischen Pfaden wie /notes/{note_id}, was zu falschen Zuordnungen führte.
@@ -222,91 +176,46 @@ Systematische Analyse der Pytest-Fehlermeldungen zur schrittweisen Optimierung d
 
 #### 1. ✅ What did I accomplish?
 
-
-
-
-
-
+Hausaufgabe Frontend erledigt (2 Funktionalitäten: Liste aller Notizen anzeigen, Inhalt der Notizen anzeigen).
+Dynamische Anbindung des Frontends an die FastAPI-Backend-Schnittstelle mittels der `requests`-Bibliothek.
+Implementierung einer interaktiven Sidebar zur Navigation zwischen den vorhandenen Notizen.
 ---
 
 #### 2. 🚧 What challenges did I face?
 
-
-
-
-
-
+Die saubere Trennung zwischen Backend-Logik und Frontend-Darstellung war anfangs ungewohnt.
+Herausforderung bei der benutzerfreundlichen Aufbereitung der JSON-Daten (insbesondere Tags und Zeitstempel) innerhalb der Streamlit-UI.
+Sicherstellung einer stabilen Kommunikation zwischen den beiden Diensten (Error-Handling bei Nichterreichbarkeit des Backends).
 ---
 
 #### 3. 💡 How did I overcome them?
 
-
-
-
-
-
+Nutzung von `st.sidebar` und `st.markdown` zur strukturierten Anzeige der Notiz-Details.
+Implementierung von Try-Except-Blöcken um die API-Requests, um das Frontend bei Verbindungsfehlern stabil zu halten.
+Studium der Streamlit-Dokumentation zur effizienten State-Verwaltung innerhalb der Applikation.
 ---
 
 ### Day 8
 
 #### 1. ✅ What did I accomplish?
 
-
-
-
-
-
+Repository aufgeräumt (Dateistruktur optimiert, unnötige Testdateien entfernt).
+Ausführliche README.md geschrieben, die Installation, Nutzung und technische Highlights (FastAPI, SQLModel, Streamlit) dokumentiert.
+Worklog glatt gezogen (einheitliche Struktur statt wirre Notizen).
 ---
 
 #### 2. 🚧 What challenges did I face?
 
-
-
-
-
-
+Unklarheit über den optimalen Aufbau eines professionellen READMEs, das sowohl akademischen Anforderungen als auch Industriestandards entspricht.
+Schwierigkeit, die komplexen technischen Aspekte (Pydantic-Validierung, ZMQ-Schnittstelle) prägnant zusammenzufassen.
 ---
 
 #### 3. 💡 How did I overcome them?
 
-
-
-
-
-
+In Zusammenarbeit mit Gemini und durch eigene Websuche (Recherche bei Projekten wie FastAPI) eine klare Struktur erarbeitet.
+Einsatz von Markdown-Tabellen und Code-Blöcken zur Erhöhung der Lesbarkeit.
+Fokus auf einen "Quick Start"-Bereich gelegt, um die Hürde für neue Nutzer so gering wie möglich zu halten.
 ---
-
-### Day 9
-
-#### 1. ✅ What did I accomplish?
-
-
-
-
-
-
----
-
-#### 2. 🚧 What challenges did I face?
-
-
-
-
-
-
----
-
-#### 3. 💡 How did I overcome them?
-
-
-
-
-
-
----
-
-
-# 🎉 Congratulations! You did it! 🎓✨
 
 
 

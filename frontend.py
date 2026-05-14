@@ -34,7 +34,7 @@ def fetch_note_details(note_id):
     """Nutzt den GET /notes/{id} Endpunkt deiner API"""
     response = requests.get(f"{API_BASE_URL}/notes/{note_id}")
     if response.status_code == 200:
-        return response.json()
+        return response.json()  
     return None
 
 # --- Hausaufgabe Teil 1: Liste mit Titeln anzeigen ---
